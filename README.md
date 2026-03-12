@@ -1,4 +1,4 @@
-# Hello this is Read me File for my project
+# Hello, this is Read me File for my project.
 
 ------------------------------------------------------------------------
 
