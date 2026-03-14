@@ -75,7 +75,7 @@ public class BookingService {
         } else if (repairOrder.getTruck() != null) {
             Truck truck = repairOrder.getTruck();
             System.out.println("Engine Size         : " + truck.getEngineSize() + "L");
-            System.out.println("Doors / Tires: " + truck.getDoors() + " / " + truck.getTires());
+            System.out.println("Doors & Tires       : " + truck.getDoors() + " / " + truck.getTires());
             System.out.println("Payload Capacity    : " + truck.getPayloadCapacityTons() + " tons");
             System.out.println("Sleeping Cabin      : " + truck.hasSleepingCabin());
             System.out.println("Transmission        : " + truck.getTransmission().getType()

@@ -28,6 +28,9 @@ class Main {
         Mechanic mechanic2 = new Mechanic("Luka", "577 22 33 44", "Brake & Suspension", 5, new BigDecimal("18.00"));
 
         // --- Services ---
+
+        /* Super Abstract Class holding diff child objects, service references many forms */
+
         Service oilChange = new OilChange(new BigDecimal("50.00"));
         Service tireChange = new TireChange(new BigDecimal("100.00"));
         Service brakeRepair = new BrakeRepair(new BigDecimal("200.00"));
@@ -89,9 +92,9 @@ class Main {
         // --- BookingService uses Garage as root ---
         BookingService bookingService = new BookingService(garage);
 
-        bookingService.createOrder(repairOrder1);
-        bookingService.createOrder(repairOrder2);
-        bookingService.createOrder(repairOrder3);
+        bookingService.createOrder(repairOrder1); // OilChange
+        bookingService.createOrder(repairOrder2); // BrakeRepair
+        bookingService.createOrder(repairOrder3); // TireChange
 
         System.out.println("Total orders processed: " + BookingService.getTotalOrders());
         System.out.println("Garage: " + garage.getName() + " | Free bays: " + garage.getFreeBays());
